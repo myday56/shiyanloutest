@@ -1,2 +1,2 @@
 import tushare
-print()
+import sys
