@@ -1,2 +1,0 @@
-import tushare
-import sys
