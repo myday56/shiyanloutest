@@ -1,22 +1,26 @@
 import sys
 # money_list = {}
 def input_num():
-    # for arg in sys.argv[1:]:
-    #     n = arg.split(':')
-    #     # print(n[0]+':'+n[1])
-    #     # return n[0],n[1]
-    #     money_list[n[0]] = n[1]
-    a = sys.argv[1:]
-    n = a.split(':')
+    l = []
+    for arg in sys.argv[1:]:
+        n = arg.split(':')
+        l.append(n)
+    return l
+def shebao(x):
+    x1 = 0.08
+    x2 = 0.02
+    x3 = 0.005
+    x4 = 0.00
+    x5 = 0.00
+    x6 = 0.06
+    x_sum = x1+x2+x3+x4+x5+x6
+    shishou = float(x) *(1 - x_sum)
+    return shishou
 
-    userid = n[0]
-    money = n[1]
-    return userid, money
 
-def calc():  
-    a = input_num()
+def geshui(x):  
     try:
-        x = int(a[1])
+        x = int(x)
     except ValueError:
         print("Parameter Error")
     else:
@@ -37,7 +41,15 @@ def calc():
             x = a*0.35 - 5505
         else:
             x = a*0.45 - 13505
-        print(format(x,".2f"))
+        # print(format(x,".2f"))
+        result = format(a-x,".2f")
+        return result
 
-input_num()
-print(money)
+
+
+l = input_num()
+x = len(l)
+for i in range(x):
+    # print(l[i][1])
+    a = shebao(l[i][1])
+    print(l[i][0]+":"+geshui(a))
