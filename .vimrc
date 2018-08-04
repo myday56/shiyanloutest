@@ -1,77 +1,29 @@
-set nocompatible
+et nu ï¼èªå¨æ¾ç¤ºè¡å·
 
-"æ¾ç¤ºè¡å·
-set number
+set ts=4 ï¼ä¸ä¸ª tab ç­äº 4 ä¸ªç©ºæ ¼
 
-"è®¾ç½®å¨ç¼è¾è¿ç¨ä¸­å³ä¸è§æ¾ç¤ºåæ çè¡åä¿¡æ¯
-set ruler
- 
-"å¨ç¶ææ æ¾ç¤ºæ­£å¨è¾å¥çå½ä»¤
-set showcmd
- 
-"è®¾ç½®åå²è®°å½æ¡æ°
-set history=1000
- 
-"è®¾ç½®åæ¶å¤ä»½ ç¦æ­¢ä¸´æ¶æä»¶ççæ
-set nobackup
-set noswapfile
- 
-"è®¾ç½®å¹éæ¨¡å¼,ç±»ä¼¼å½è¾å¥ä¸ä¸ªå·¦æ¬å·æ¶ä¼å¹éç¸åºçé£ä¸ªå³æ¬å·
-set showmatch
- 
-"è®¾ç½®C/C++æ¹å¼èªå¨å¯¹é½
-set autoindent
-set cindent
- 
-"å¼å¯è¯­æ³é«äº®åè½
-syntax enable
-syntax on
- 
-"æå®éè²æ¹æ¡ä¸º256è²
-set t_Co=256
- 
-"è®¾ç½®æç´¢æ¶å¿½ç¥å¤§å°å
-set ignorecase
+set et ï¼ä½¿ Tab é®äº§çç©ºæ ¼ï¼expandtabï¼
 
-"å®æ¶æ¾ç¤ºæç´¢ç»æ
-set incsearch
- 
-"éç½®backspaceçå·¥ä½æ¹å¼
-set backspace=indent,eol,start
- 
-"è®¾ç½®å¨vimä¸­å¯ä»¥ä½¿ç¨é¼ æ 
-set mouse=a
- 
-"è®¾ç½®tabå®½åº¦
-set tabstop=4
- 
-"è®¾ç½®èªå¨å¯¹é½ç©ºæ ¼æ°
-set shiftwidth=4
- 
-"è®¾ç½®éæ ¼é®æ¶å¯ä»¥å é¤4ä¸ªç©ºæ ¼
-set smarttab
-set softtabstop=4
- 
-"å°tabé®èªå¨è½¬æ¢ä¸ºç©ºæ ¼
-set expandtab
- 
-"è®¾ç½®ç¼ç æ¹å¼
-set encoding=utf-8
- 
-"èªå¨å¤æ­ç¼ç æ¶ ä¾æ¬¡å°è¯ä»¥ä¸ç¼ç 
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
- 
-"æ£æµæä»¶ç±»å
-filetype on
- 
-"éå¯¹ä¸åçæä»¶éåä¸åçç¼©è¿æ¹å¼
-filetype indent on
- 
-"å¯å¨æºè½è¡¥å¨
-filetype plugin indent on
+set ai ï¼èªå¨ç¼©è¿ï¼auto indentationï¼
 
-"æ¬å·èªå¨è¡¥å¨
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
-inoremap { {}<ESC>i
-inoremap < <><ESC>i
+set sw=4 ï¼èªå¨ç¼©è¿å°ºå¯¸ä¸º 4 ä¸ªç©ºæ ¼ï¼shiftwidthï¼
+
+set si ï¼æºè½å¯¹é½ï¼éåèªå¨ç¼©è¿ï¼smartindentï¼
+
+set smarttab ï¼ä¸ä¸ª Backspace å é¤è¡é¦ 4 ä¸ªè¿ç»­ç©ºæ ¼ï¼å¯éå set et ä½¿ç¨
+
+set lbr ï¼ä¸å¨åè¯ä¸­é´æ­è¡
+
+set hls ï¼æå¼æç´¢é«äº®ï¼æä»¶åå½ä»¤è¡æ¨¡å¼ :set noh åæ¶æç´¢ï¼
+
+syntax on ï¼èªå¨è¯­æ³é«äº®
+
+set encoding=utf-8 ï¼ç¨ vim åå»ºæä»¶èªå¨ä¸º utf-8 ç¼ç 
+
+set nocompatible ï¼å³é­ãä¸ vi å¼å®¹ãçæ¨¡å¼ï¼é¿åå¾å¤ bug
+
+set cindent ï¼è®¾ç½®ç±»ä¼¼ C è¯­è¨é£æ ¼çç¼©è¿
+
+set cc=80 ï¼è®¾ç½®ç¬¬ 80 ä¸ªå­ç¬¦å¤ä¸ºæ å°º
+
+
