@@ -1,29 +1,28 @@
-et nu ï¼èªå¨æ¾ç¤ºè¡å·
+set nu ：自动显示行号
 
-set ts=4 ï¼ä¸ä¸ª tab ç­äº 4 ä¸ªç©ºæ ¼
+set ts=4 ：一个 tab 等于 4 个空格
 
-set et ï¼ä½¿ Tab é®äº§çç©ºæ ¼ï¼expandtabï¼
+set et ：使 Tab 键产生空格（expandtab）
 
-set ai ï¼èªå¨ç¼©è¿ï¼auto indentationï¼
+set ai ：自动缩进（auto indentation）
 
-set sw=4 ï¼èªå¨ç¼©è¿å°ºå¯¸ä¸º 4 ä¸ªç©ºæ ¼ï¼shiftwidthï¼
+set sw=4 ：自动缩进尺寸为 4 个空格（shiftwidth）
 
-set si ï¼æºè½å¯¹é½ï¼éåèªå¨ç¼©è¿ï¼smartindentï¼
+set si ：智能对齐，配合自动缩进（smartindent）
 
-set smarttab ï¼ä¸ä¸ª Backspace å é¤è¡é¦ 4 ä¸ªè¿ç»­ç©ºæ ¼ï¼å¯éå set et ä½¿ç¨
+set smarttab ：一个 Backspace 删除行首 4 个连续空格，可配合 set et 使用
 
-set lbr ï¼ä¸å¨åè¯ä¸­é´æ­è¡
+set lbr ：不在单词中间断行
 
-set hls ï¼æå¼æç´¢é«äº®ï¼æä»¶åå½ä»¤è¡æ¨¡å¼ :set noh åæ¶æç´¢ï¼
+set hls ：打开搜索高亮（文件内命令行模式 :set noh 取消搜索）
 
-syntax on ï¼èªå¨è¯­æ³é«äº®
+syntax on ：自动语法高亮
 
-set encoding=utf-8 ï¼ç¨ vim åå»ºæä»¶èªå¨ä¸º utf-8 ç¼ç 
+set encoding=utf-8 ：用 vim 创建文件自动为 utf-8 编码
 
-set nocompatible ï¼å³é­ãä¸ vi å¼å®¹ãçæ¨¡å¼ï¼é¿åå¾å¤ bug
+set nocompatible ：关闭【与 vi 兼容】的模式，避免很多 bug
 
-set cindent ï¼è®¾ç½®ç±»ä¼¼ C è¯­è¨é£æ ¼çç¼©è¿
+set cindent ：设置类似 C 语言风格的缩进
 
-set cc=80 ï¼è®¾ç½®ç¬¬ 80 ä¸ªå­ç¬¦å¤ä¸ºæ å°º
-
+set cc=80 ：设置第 80 个字符处为标尺
 
