@@ -1,1 +1,0 @@
-{"description": "Localization for Sublime Text,  support \u7b80\u4f53\u4e2d\u6587 \u7e41\u4f53\u4e2d\u6587 \u65e5\u672c\u8a9e  Chinese Japanese German Russian Spanish Armenian Swedish and French", "url": "https://github.com/rexdf/ChineseLocalization", "platforms": ["*"], "version": "1.0.5", "sublime_text": "<3000", "dependencies": []}
