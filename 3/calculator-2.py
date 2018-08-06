@@ -4,16 +4,14 @@ import csv
 
 class Args:
     def __init__(self):
-        self.args = sys.argv[1:]
-
-    def get_args(self):
-        if self.args[0] == '-c' and self.args[2] == '-d' and self.args[4] == '-o':
-            conf_file = self.args[1]
-            user_data_file = self.args[3]
-            gongzi_file = self.args[5]
-        else:
-            print('Error')
-        return conf_file, user_data_file, gongzi_file
+        try:
+            l = sys.argv[1:]
+            self.c = l[l.index('-c')+1]
+            self.o = l[l.index('-o')+1]
+            self.d = l[l.index('-d')+1]
+        except (ValueError,AttributeError) as e:
+            print("somethine wrong")
+            exit()
 
 class Config:
     def __init__(self):
@@ -21,7 +19,7 @@ class Config:
 
     def _read_config(self):
         config = {}
-        conf_file = Args().get_args()[0]
+        conf_file = Args().c
         with open(conf_file, 'r') as file:
             content = file.readlines()
             for line in content:
@@ -36,7 +34,7 @@ class UserData:
 
     def _read_user_data(self):
         userdata = []
-        user_data_file = Args().get_args()[1]
+        user_data_file = Args().o
         with open(user_data_file, 'r') as file:
             content = file.readlines()
             for line in content:
@@ -99,7 +97,7 @@ class IncomeTaxCalculator:
 
     def export(self,default='csv'):
         result = self.calc_for_all_userdata()
-        output_file = Args().get_args()[2]
+        output_file = Args().d
         with open(output_file,'w') as file:
             writer = csv.writer(file)
             writer.writerows(result)
