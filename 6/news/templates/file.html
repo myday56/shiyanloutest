@@ -1,7 +1,14 @@
 {% extends "base.html"%}
 
 {% block content %}
-<p>title:{{data['title']}}</p>
-<p>create_time:{{data['created_time']}}</p>
-<p>content:{{data['content']}}</p>
+
+<p>标题:{{files_dict[filename]['title']}}</p>
+<p>创建时间:{{files_dict[filename]['created_time']}}</p>
+<!-- <p>正文:{{files_dict[filename]['content']}}</p> -->
+
+
+
+{%for i in files_dict[filename]['content'].split(' \\n ')%}
+<p>正文:{{i}}</p>
+{% endfor%}
 {% endblock %}

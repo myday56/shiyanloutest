@@ -1,9 +1,9 @@
 {% extends "base.html"%}
 
 {% block content %}
-<div>TITLE:Hello, Shiyanlou!</div>
-<div>TITLE:Hello, World!</div>
 
-
-
+{%for key,value in files_dict.items() %}
+<li>TITLE:<b>{{value['title']}}</b></li>
+<!-- <div>TITLE:Hello, World!</div> -->
+{% endfor %}
 {% endblock %}
