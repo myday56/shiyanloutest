@@ -2,8 +2,8 @@
 
 {% block content %}
 
-{%for key,value in files_dict.items() %}
-<li>TITLE:<b>{{value['title']}}</b></li>
+{%for file in files_list%}
+<p><a href={{url_for('file',file_id=file.id)}}>{{file.title}}</a></p>
 <!-- <div>TITLE:Hello, World!</div> -->
 {% endfor %}
 {% endblock %}
