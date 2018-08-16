@@ -8,8 +8,7 @@ def get_rank(user_id):
     db = client.shiyanlou
     contests = db.contests
     
-    TODO
-
+    
 
     return rank,score,submit_time
 
