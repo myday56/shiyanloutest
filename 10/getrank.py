@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 import sys
 from pymongo import MongoClient
+from bson.son import SON
 
 def get_rank(user_id):
     client = MongoClient()
@@ -15,7 +16,7 @@ def get_rank(user_id):
                 }
             },
             {'$sort':
-                {'total_score':-1},
+                SON([('total_score', -1), ('total_time', 1)])
             }
             ])
     rank_start = 1
@@ -37,6 +38,7 @@ if __name__ == '__main__':
         user_id = int(sys.argv[1])
     except ValueError:
         print("Parameter Error")
+        exit()
     else:
         userdata = get_rank(user_id)
         print(userdata)
