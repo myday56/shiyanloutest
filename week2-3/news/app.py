@@ -31,7 +31,7 @@ class File(db.Model):
         else:
             list = rec['tags']
             list.append(tag_name)
-            db_mongo.tagrec_update_one({'id':self.id},{'$set':{'tags':list}})
+            db_mongo.tagrec.update_one({'id':self.id},{'$set':{'tags':list}})
     def remove_tag(self,tag_name):
         rec = db_mongo.tagrec.find_one({'id':self.id})
         if rec == None:
@@ -40,13 +40,15 @@ class File(db.Model):
             list = rec['tags']
             list.remove(tag_name)
             db_mongo.tagrec.update_one({'id':self.id},{'$set':{'tags':list}})
-
+    @property        
     def tags(self):
         rec = db_mongo.tagrec.find_one({'id':self.id})
         if rec == None:
             return None
         else:
             return rec['tags']
+    def __repr__(self):
+        return 'ID : {},Title : {},Created_time : {},Content : {},Category : {},Tags : {}'.format(self.id,self.title,str(self.created_time),self.content,self.category,self.tags)
 class Category(db.Model):
     id = db.Column(db.Integer,primary_key=True)
     name = db.Column(db.String(80))
@@ -59,13 +61,13 @@ class Category(db.Model):
 def index():
     files_list = File.query.all()
     return render_template('index.html',files_list=files_list)
-@app.route('/files/<file_id>')
-def file(file_id):
-    files_dict = File.query.filter_by(id = file_id).first()
-    if files_dict == None:
-        abort(404) 
-    else:
-        return render_template('file.html',files_dict=files_dict)
+# @app.route('/files/<file_id>')
+# def file(file_id):
+#     files_dict = File.query.filter_by(id = file_id).first()
+#     if files_dict == None:
+#         abort(404) 
+#     else:
+#         return render_template('file.html',files_dict=files_dict)
  
 @app.errorhandler(404)
 def not_found(error):
