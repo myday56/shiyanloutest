@@ -16,7 +16,7 @@ def issues(repo):
     lable2 = lable.copy()
     lable2['user_name'] = user_name_series
     issues_df = lable2[['number','title','user_name']]
-    issues_df.set_index(['number'],inplace=True)
+#     issues_df.set_index(['number'],inplace=True)
     # print(issues_df)
     return issues_df
 
